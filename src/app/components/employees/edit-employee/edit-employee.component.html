@@ -1,0 +1,45 @@
+<div class="container my-5">
+  <h1 class="mb-3">Edit Employee</h1>
+
+  <form #form="ngForm" (ngSubmit)="updateEmployee()">
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <div class="mb-3">
+            <label for="name">Id</label>
+            <input type="text" id="id" class="form-control"   readonly
+                   name="id" [(ngModel)]="employeeDetails.id">
+          </div>
+          <div class="mb-3">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control"  aria-describedby="Name" placeholder="Enter Name"
+                   name="name" [(ngModel)]="employeeDetails.name">
+          </div>
+          <div class="mb-3">
+            <label for="email">Email address</label>
+            <input type="email" id="email" class="form-control"  aria-describedby="Email" placeholder="Email Address"
+                   name="email" [(ngModel)]="employeeDetails.email">
+          </div>
+          <div class="mb-3">
+            <label for="phone">Phone</label>
+            <input type="number" id="phone" class="form-control"  aria-describedby="Phone" placeholder="Phone Number"
+                   name="phone" [(ngModel)]="employeeDetails.phone">
+          </div>
+          <div class="mb-3">
+            <label for="salary">Salary</label>
+            <input type="number" id="salary" class="form-control"  aria-describedby="Salary" placeholder="Salary"
+                   name="phone" [(ngModel)]="employeeDetails.salary">
+          </div>
+          <div class="mb-3">
+            <label for="department">Department</label>
+            <input type="text" id="department" class="form-control"  aria-describedby="Department" placeholder="Department"
+                   name="department" [(ngModel)]="employeeDetails.department">
+          </div>
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="button" class="btn btn-danger"
+                  (click)="deleteEmployee(employeeDetails.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
